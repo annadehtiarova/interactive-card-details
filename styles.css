@@ -1,0 +1,264 @@
+/* 
+## Colors
+
+### Primary
+
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)
+*/
+
+
+body{
+    font-family: 'Space Grotesk';
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-content{
+    position: relative;
+    width: 30%;
+    background: linear-gradient(hsl(278, 68%, 11%) ,hsl(278, 94%, 30%));
+}
+
+.card-image-front{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    position: relative;
+}
+.card-image-back{
+    position: absolute;
+    top: 30vh;
+    left: 20%;
+ 
+}
+
+
+.card-front-content{
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding: 24px;
+    position: absolute;
+    top: 0px;
+    color: white;
+    z-index: 999;
+    
+}
+
+.circles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+}
+
+.filled-circle{
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.empty-circle{
+    border: 1px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+}
+
+.name-date{
+    display: flex;
+    flex-direction: row;
+    gap: 152px;
+    margin: 0;
+}
+
+.card-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card-number{
+    margin: 0;
+}
+
+.card-image-back .cvc{
+    position: absolute;
+    top: 93px;
+    left: 360px;
+    color: white;
+
+}
+
+.right-content-success{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    margin: auto;
+    width: 500px;
+}
+
+.right-content-success h2{
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.right-content-success p{
+    margin: 0;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.text img{
+    width: 88px;
+}
+
+
+.right-content{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 500px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+form .cardholder-name,
+form .card-number,
+form .exp-date,
+form .cvc{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.month,
+.year{
+    width: 100px;
+}
+
+.month-error,
+.year-error{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cvc{
+    width: 85%;
+}
+
+.month-year{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.card-date-cvc{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+
+label{
+    color: hsl(278, 68%, 11%);
+    font-size: 14px;
+    font-weight:500;
+    letter-spacing: 3px;
+}
+
+input {
+    height: 28px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 8px;
+    padding: 14px;
+    outline: none;
+    margin: 0;
+    font-size: large;
+    font-family: 'Space Grotesk';
+    cursor: pointer;
+}
+
+input:hover{
+    border: 1px solid hsl(278, 68%, 11%);
+
+}
+
+input:focus{
+    border: 1px solid hsl(278, 68%, 11%);
+    color: hsl(278, 68%, 11%);
+    font-size: large;
+}
+
+input:active{
+    border: 1px solid hsl(270, 3%, 87%);;
+    color: hsl(278, 68%, 11%);
+    font-size: large;
+}
+
+
+.error-message-format{
+    display: none;
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.error-message{
+    display: none;
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+input.error{
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
+input::placeholder{
+    color: hsl(270, 3%, 87%);
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+}
+
+button{
+    border-radius: 8px;
+    padding: 18px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+}
