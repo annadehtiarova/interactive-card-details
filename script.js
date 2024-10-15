@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
     confirmBtn.addEventListener('click', function(event){
         event.preventDefault();
 
+
         let allInputsValid = true;
 
         inputs.forEach(function(input){
@@ -30,23 +31,17 @@ document.addEventListener('DOMContentLoaded', function(){
                 errorMsg.style.display = 'block';
                 allInputsValid = false;
             } else {
-                input.classList.remove('error');
-                
+                input.classList.remove('error'); 
+                errorMsg.style.display = 'none';
+            } 
+
+
+            if(allInputsValid){
+                errorMsg.style.display = 'none';
+                rightContent.style.display = 'none';
+                rightContentSuccess.style.display = 'flex';
             }   
-        })
-
-        if(allInputsValid){
-            errorMsg.style.display = 'none';
-            rightContent.style.display = 'none';
-            rightContentSuccess.style.display = 'flex';
             
-            }     
-    })
-
-
-        inputs.forEach(function(input){
-            const errorMsg = input.nextElementSibling;
-
             input.addEventListener('input', function(){
                 input.classList.remove('error');
                 errorMsg.style.display = 'none';
@@ -67,12 +62,9 @@ document.addEventListener('DOMContentLoaded', function(){
                     updateCvcDisplay();
                 }
             })
-        })
 
-
-        function updateCardNumberDisplay(){
+            function updateCardNumberDisplay(){
             let cardValue = cardNumberInput.value;
-            cardValue = cardValue.replace(/(.{4})/g, '$1 ').trim();
             cardNumberDisplay.innerText = cardValue ? cardValue : '0000 0000 0000 0000';
             cardNumberDisplay.style.fontSize = '30px';
             cardNumberDisplay.style.letterSpacing = '4px';
@@ -101,66 +93,13 @@ document.addEventListener('DOMContentLoaded', function(){
             cardCvcDisplay.innerText = cvcValue ? cvcValue : '000';
     
         }
-
-        function limitToTwoDigits(input) {
-            input.addEventListener('input', function() {          
-                let value = input.value.replace(/\D/g, '');
-    
-                if (value.length >= 2) {
-                    value = value.slice(0, 2);
-                    input.value = value;
-                    input.maxLength = 2; 
-                } else {
-                    input.maxLength = 10;
-                }
-    
-                input.value = value;
-            });
-        }
-
-        function limitToThreeDigits(input) {
-            input.addEventListener('input', function() {             
-                let value = input.value.replace(/\D/g, '');
-
-                if (value.length >= 3) {
-                    value = value.slice(0, 3);
-                    input.value = value;
-                    input.maxLength = 3; 
-                } else {
-                    input.maxLength = 10; 
-                }
-    
-                input.value = value;
-            });
-        }
-
-        function limitToSixteenDigits(input) {
-            input.addEventListener('input', function() {
-                let value = input.value.replace(/\D/g, '');
-
-                if (value.length >= 16) {
-                    value = value.slice(0, 16);
-                    input.value = value;
-                    input.maxLength = 16; 
-                } else {
-                    input.maxLength = 20; 
-                }
-    
-                input.value = value;
-            });
-        }
-    
-       
-        limitToTwoDigits(cardMonthInput);
-        limitToTwoDigits(cardYearInput);
-        limitToThreeDigits(cardCvcInput);
-        limitToSixteenDigits(cardNumberInput);
-
-        
-
-
-    
+ 
 
 })
 
+})
 
+    })
+
+
+        

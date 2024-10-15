@@ -229,15 +229,6 @@ input:active{
     font-size: large;
 }
 
-
-.error-message-format{
-    display: none;
-    color: hsl(0, 100%, 66%);
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
-}
-
 .error-message{
     display: none;
     color: hsl(0, 100%, 66%);

@@ -47,9 +47,9 @@
 
                 <div class="card-number">
                 <label for="card-number">CARD NUMBER</label>
-                <input class="input card-number-input" type="text" placeholder="e.g. 1234567891230000" autocomplete="off">
+                <input class="input card-number-input" type="text" placeholder="e.g. 1234567891230000" autocomplete="off" maxlength="16" pattern="\d{16}">
                 <p class="error-message">Can't be blank</p>
-                <p class="error-message-format">Wrong format, numbers only.</p>
+                
                 </div>
 
                 <div class="card-date-cvc">
@@ -57,18 +57,18 @@
                         <label for="exp-date">EXP. DATE (MM/YY)</label>
                         <div class="month-year">
                             <div class="month-error">
-                            <input class="input month" class="month" type="text" placeholder="MM" autocomplete="off">
+                            <input class="input month" class="month" type="text" placeholder="MM" autocomplete="off" maxlength="2" pattern="\d{2}">
                             <p class="error-message">Can't be blank</p>
                             </div>
                             <div class="year-error">
-                            <input class="input year" class="year" type="text" placeholder="YY" autocomplete="off">
+                            <input class="input year" class="year" type="text" placeholder="YY" autocomplete="off" maxlength="2" pattern="\d{2}">
                             <p class="error-message">Can't be blank</p>
                             </div>
                         </div>
                     </div>
                     <div class="cvc-input">
                         <label for="cvc">CVC</label>
-                        <input class="input cvc" type="text" placeholder="e.g. 123" autocomplete="off">
+                        <input class="input cvc" type="text" placeholder="e.g. 123" autocomplete="off" maxlength="3" pattern="\d{3}">
                         <p class="error-message">Can't be blank</p>
                     </div>
                 </div>
