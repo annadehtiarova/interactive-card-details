@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const cardYearDisplay = document.querySelector('.card-year-display');
     const cardCvcInput = document.querySelector('.cvc');
     const cardCvcDisplay = document.querySelector('.cvc-display');
+    const errorMsg = document.querySelector('.error-message');
     
     function updateDisplays() {
         updateCardNumberDisplay();
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // Listen to button click
     confirmBtn.addEventListener('click', function(event){
         event.preventDefault();
-         
+       
 
         let allInputsValid = true;
 
@@ -164,18 +165,16 @@ document.addEventListener('DOMContentLoaded', function(){
                     allInputsValid = false;
     }
     }
+})
 
-        if(allInputsValid){
-            errorMsg.style.display = 'none';
-            rightContent.style.display = 'none';
-            rightContentSuccess.style.display = 'flex';
-        }  
-            
+            if(allInputsValid){
+                errorMsg.style.display = 'none';
+                rightContent.style.display = 'none';
+                rightContentSuccess.style.display = 'flex';    
+            }
+})
+    
 
 })
-            
 
-
-})
-})
 
