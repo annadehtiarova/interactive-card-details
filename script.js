@@ -60,23 +60,20 @@ document.addEventListener('DOMContentLoaded', function(){
             input.classList.remove('error');
             errorMsg.style.display = 'none';
             updateDisplays(); 
-
         });
     });
 
-    cardNumberInput.addEventListener('input', function() {
-        let cardValue = cardNumberInput.value.replace(/\D/g, '');
-        cardValue = cardValue.match(/.{1,4}/g)?.join(' ') || '';
+    
 
-        cardNumberInput.value = cardValue;
-    })
    
+    // Listen to button click
     confirmBtn.addEventListener('click', function(event){
         event.preventDefault();
-
+         
 
         let allInputsValid = true;
 
+        // Iterate over each input field and validate
         inputs.forEach(function(input){
             const errorMsg = input.nextElementSibling;
 
@@ -142,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 allInputsValid = false;
         }
                 else if (input.value.length < 2) {
-                    errorMsg.innerText = 'Month must be 2 digits.';
+                    errorMsg.innerText = 'Year must be 2 digits.';
                     errorMsg.style.display = 'block';
                     input.classList.add('error');
                     allInputsValid = false;
@@ -160,21 +157,23 @@ document.addEventListener('DOMContentLoaded', function(){
                 input.classList.add('error');
                 allInputsValid = false;
         }
-        else if (input.value.length < 3) {
-            errorMsg.innerText = 'CVC must be 2 digits.';
-            errorMsg.style.display = 'block';
-            input.classList.add('error');
-            allInputsValid = false;
+                else if (input.value.length < 3) {
+                    errorMsg.innerText = 'CVC must be 2 digits.';
+                    errorMsg.style.display = 'block';
+                    input.classList.add('error');
+                    allInputsValid = false;
     }
-        }
+    }
+
+        if(allInputsValid){
+            errorMsg.style.display = 'none';
+            rightContent.style.display = 'none';
+            rightContentSuccess.style.display = 'flex';
+        }  
             
 
 })
-            if(allInputsValid){
-                errorMsg.style.display = 'none';
-                rightContent.style.display = 'none';
-                rightContentSuccess.style.display = 'flex';
-            }  
+            
 
 
 })

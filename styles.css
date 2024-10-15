@@ -101,6 +101,10 @@ body{
     font-size: 30px;
 }
 
+.cardholder-name-display{
+    text-transform: uppercase;
+}
+
 .cvc-display{
     position: absolute;
     top: 93px;
