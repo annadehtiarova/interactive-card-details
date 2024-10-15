@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function(){
     const confirmBtn = document.querySelector('.confirm');
     const rightContent = document.querySelector('.right-content');
     const rightContentSuccess = document.querySelector('.right-content-success');
-    const errorMsg = document.querySelector('.error-message');
     const inputs = document.querySelectorAll('.input');
     const cardNameInput = document.querySelector('.cardholder-name-input');
     const cardNameDisplay = document.querySelector('.cardholder-name-display');
@@ -61,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
             input.classList.remove('error');
             errorMsg.style.display = 'none';
             updateDisplays(); 
+
         });
     });
 
@@ -78,23 +78,36 @@ document.addEventListener('DOMContentLoaded', function(){
                 input.classList.add('error');
                 errorMsg.style.display = 'block';
                 allInputsValid = false;
-            } else {
+            }  else {
                 input.classList.remove('error'); 
                 errorMsg.style.display = 'none';
             } 
 
+            // Validate card number
+            if (input.classList.contains('card-number-input')) {
+                if (!input.value) {
+                    input.classList.add('error');
+                    errorMsg.style.display = 'block';
+                    allInputsValid = false;}
+                else if (!/^\d{16}$/.test(input.value)) {
+                errorMsg.innerText = 'Wrong format, numbers only.';
+                errorMsg.style.display = 'block';
+                input.classList.add('error');
+                allInputsValid = false;
+        }
+}
 
             if(allInputsValid){
                 errorMsg.style.display = 'none';
                 rightContent.style.display = 'none';
                 rightContentSuccess.style.display = 'flex';
-            }   
+            }  
+            
 
 })
 
+
+
+})
 })
 
-})
-
-
-        
