@@ -20,16 +20,20 @@
                         <div class="empty-circle"></div>
                     </div>
                 <div class="card-inputs">
-                    <h2 class="card-number">CARD NUMBER</h2>
+                    <h2 class="card-number-display">0000 0000 0000 0000</h2>
                     <div class="name-date">
-                        <p class="cardholder-name">CARDHOLDER NAME</p>
-                        <p class="card-exp-date">EXP DATE</p>
+                        <p class="cardholder-name-display">Jane Appleseed</p>
+                        <div class="month-year-display">
+                        <p class="card-month-display">00</p>
+                        <p>/</p>
+                        <p class="card-year-display">00</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="card-image-back">
                 <img src="images/bg-card-back.png" alt="bg-card-back">
-                <p class="cvc">CVC</p>
+                <p class="cvc-display">000</p>
             </div>
             </div>
         </div>
@@ -37,13 +41,13 @@
             <form autocomplete="off">
                 <div class="cardholder-name">
                 <label for="cardholder-name">CARDHOLDER NAME</label>
-                <input class="input" class="cardholder-name" type="text" placeholder="e.g. Jane Appleseed" autocomplete="off">
+                <input class="input cardholder-name-input" type="text" placeholder="e.g. Jane Appleseed" autocomplete="off">
                 <p class="error-message">Can't be blank</p>
                 </div>
 
                 <div class="card-number">
                 <label for="card-number">CARD NUMBER</label>
-                <input class="input" class="card-number" type="text" placeholder="e.g. 1234567891230000" autocomplete="off">
+                <input class="input card-number-input" type="text" placeholder="e.g. 1234567891230000" autocomplete="off">
                 <p class="error-message">Can't be blank</p>
                 <p class="error-message-format">Wrong format, numbers only.</p>
                 </div>
@@ -62,9 +66,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cvc">
+                    <div class="cvc-input">
                         <label for="cvc">CVC</label>
-                        <input class="input cvc" class="cvc" type="text" placeholder="e.g. 123" autocomplete="off">
+                        <input class="input cvc" type="text" placeholder="e.g. 123" autocomplete="off">
                         <p class="error-message">Can't be blank</p>
                     </div>
                 </div>

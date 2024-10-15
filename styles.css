@@ -44,9 +44,7 @@ body{
     position: absolute;
     top: 30vh;
     left: 20%;
- 
 }
-
 
 .card-front-content{
     display: flex;
@@ -81,27 +79,32 @@ body{
     border-radius: 100%;
 }
 
-.name-date{
-    display: flex;
-    flex-direction: row;
-    gap: 152px;
-    margin: 0;
-}
-
 .card-inputs{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 18px;
 }
 
-.card-number{
-    margin: 0;
+.month-year-display{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 187px;
+    left: 380px;
 }
 
-.card-image-back .cvc{
+.card-number-display{
+    margin: 0;
+    width: 100%;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+.cvc-display{
     position: absolute;
     top: 93px;
-    left: 360px;
+    left: 365px;
     color: white;
 
 }
@@ -154,7 +157,7 @@ form{
 form .cardholder-name,
 form .card-number,
 form .exp-date,
-form .cvc{
+form .cvc-input{
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -185,6 +188,7 @@ form .cvc{
 .card-date-cvc{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 18px;
 }
 
