@@ -83,25 +83,83 @@ document.addEventListener('DOMContentLoaded', function(){
                 errorMsg.style.display = 'none';
             } 
 
+
             // Validate card number
             if (input.classList.contains('card-number-input')) {
                 if (!input.value) {
                     input.classList.add('error');
                     errorMsg.style.display = 'block';
+                    allInputsValid = false;
+                }
+                else if (!/^\d+$/.test(input.value)) {
+                errorMsg.innerText = 'Wrong format, numbers only.';
+                errorMsg.style.display = 'block';
+                input.classList.add('error');
+                allInputsValid = false;
+                }   
+                else if (input.value.length < 16) {
+                errorMsg.innerText = 'Card number must be 16 digits.';
+                errorMsg.style.display = 'block';
+                input.classList.add('error');
+                allInputsValid = false;
+        }}
+            // Validate card month
+            if (input.classList.contains('month')) {
+                if (!input.value) {
+                    input.classList.add('error');
+                    errorMsg.style.display = 'block';
                     allInputsValid = false;}
-                else if (!/^\d{16}$/.test(input.value)) {
+                else if (!/^\d+$/.test(input.value)) {
                 errorMsg.innerText = 'Wrong format, numbers only.';
                 errorMsg.style.display = 'block';
                 input.classList.add('error');
                 allInputsValid = false;
         }
-}
-
-            if(allInputsValid){
-                errorMsg.style.display = 'none';
-                rightContent.style.display = 'none';
-                rightContentSuccess.style.display = 'flex';
-            }  
+                else if (input.value.length < 2) {
+                    errorMsg.innerText = 'Month must be 2 digits.';
+                    errorMsg.style.display = 'block';
+                    input.classList.add('error');
+                    allInputsValid = false;
+            }
+        }
+            // Validate card year
+            if (input.classList.contains('year')) {
+                if (!input.value) {
+                    input.classList.add('error');
+                    errorMsg.style.display = 'block';
+                    allInputsValid = false;}
+                else if (!/^\d+$/.test(input.value)) {
+                errorMsg.innerText = 'Wrong format, numbers only.';
+                errorMsg.style.display = 'block';
+                input.classList.add('error');
+                allInputsValid = false;
+        }
+                else if (input.value.length < 2) {
+                    errorMsg.innerText = 'Month must be 2 digits.';
+                    errorMsg.style.display = 'block';
+                    input.classList.add('error');
+                    allInputsValid = false;
+            }
+        }
+            // Validate card cvc
+            if (input.classList.contains('cvc')) {
+                if (!input.value) {
+                    input.classList.add('error');
+                    errorMsg.style.display = 'block';
+                    allInputsValid = false;}
+                else if (!/^\d+$/.test(input.value)) {
+                errorMsg.innerText = 'Wrong format, numbers only.';
+                errorMsg.style.display = 'block';
+                input.classList.add('error');
+                allInputsValid = false;
+        }
+        else if (input.value.length < 3) {
+            errorMsg.innerText = 'CVC must be 2 digits.';
+            errorMsg.style.display = 'block';
+            input.classList.add('error');
+            allInputsValid = false;
+    }
+        }
             
 
 })
