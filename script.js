@@ -15,7 +15,55 @@ document.addEventListener('DOMContentLoaded', function(){
     const cardCvcInput = document.querySelector('.cvc');
     const cardCvcDisplay = document.querySelector('.cvc-display');
     
-   
+    function updateDisplays() {
+        updateCardNumberDisplay();
+        updateCardNameDisplay();
+        updateMonthDisplay();
+        updateYearDisplay();
+        updateCvcDisplay();
+    }
+
+    function updateCardNumberDisplay(){
+        let cardValue = cardNumberInput.value;
+        cardNumberDisplay.innerText = cardValue ? cardValue : '0000 0000 0000 0000';
+        cardNumberDisplay.style.fontSize = '30px';
+        cardNumberDisplay.style.letterSpacing = '4px';
+    }
+    
+    function updateCardNameDisplay(){
+        let cardNameValue = cardNameInput.value;
+       cardNameDisplay.innerText = cardNameValue ? cardNameValue : 'Jane Appleseed';
+    
+    }
+    
+    function updateMonthDisplay(){
+        let monthValue = cardMonthInput.value.padStart(2, '0');
+        cardMonthDisplay.innerText = monthValue ? monthValue : '00';
+    
+    }
+    
+    function updateYearDisplay(){
+        let yearValue = cardYearInput.value.slice(-2);;
+        cardYearDisplay.innerText = yearValue ? yearValue : '00';
+    
+    }
+    
+    function updateCvcDisplay(){
+        let cvcValue = cardCvcInput.value;
+        cardCvcDisplay.innerText = cvcValue ? cvcValue : '000';
+    
+    }
+
+    inputs.forEach(function(input) {
+        const errorMsg = input.nextElementSibling; 
+
+        input.addEventListener('input', function() {
+            input.classList.remove('error');
+            errorMsg.style.display = 'none';
+            updateDisplays(); 
+        });
+    });
+
    
     confirmBtn.addEventListener('click', function(event){
         event.preventDefault();
@@ -41,65 +89,12 @@ document.addEventListener('DOMContentLoaded', function(){
                 rightContent.style.display = 'none';
                 rightContentSuccess.style.display = 'flex';
             }   
-            
-            input.addEventListener('input', function(){
-                input.classList.remove('error');
-                errorMsg.style.display = 'none';
-                
-                if (input.classList.contains('card-number-input')) {
-                    updateCardNumberDisplay();
-                }
-                if (input.classList.contains('cardholder-name-input')) {
-                    updateCardNameDisplay();
-                }
-                if (input.classList.contains('month')) {
-                    updateMonthDisplay();
-                }
-                if (input.classList.contains('year')) {
-                    updateYearDisplay();
-                }
-                if (input.classList.contains('cvc')) {
-                    updateCvcDisplay();
-                }
-            })
-
-            function updateCardNumberDisplay(){
-            let cardValue = cardNumberInput.value;
-            cardNumberDisplay.innerText = cardValue ? cardValue : '0000 0000 0000 0000';
-            cardNumberDisplay.style.fontSize = '30px';
-            cardNumberDisplay.style.letterSpacing = '4px';
-        }
-
-        function updateCardNameDisplay(){
-            let cardNameValue = cardNameInput.value;
-           cardNameDisplay.innerText = cardNameValue ? cardNameValue : 'Jane Appleseed';
-    
-        }
-
-        function updateMonthDisplay(){
-            let monthValue = cardMonthInput.value.padStart(2, '0');
-            cardMonthDisplay.innerText = monthValue ? monthValue : '00';
-    
-        }
-
-        function updateYearDisplay(){
-            let yearValue = cardYearInput.value.slice(-2);;
-            cardYearDisplay.innerText = yearValue ? yearValue : '00';
-    
-        }
-
-        function updateCvcDisplay(){
-            let cvcValue = cardCvcInput.value;
-            cardCvcDisplay.innerText = cvcValue ? cvcValue : '000';
-    
-        }
- 
 
 })
 
 })
 
-    })
+})
 
 
         
