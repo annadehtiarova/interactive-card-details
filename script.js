@@ -64,6 +64,12 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 
+    cardNumberInput.addEventListener('input', function() {
+        let cardValue = cardNumberInput.value.replace(/\D/g, '');
+        cardValue = cardValue.match(/.{1,4}/g)?.join(' ') || '';
+
+        cardNumberInput.value = cardValue;
+    })
    
     confirmBtn.addEventListener('click', function(event){
         event.preventDefault();
@@ -102,7 +108,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 errorMsg.style.display = 'block';
                 input.classList.add('error');
                 allInputsValid = false;
-        }}
+                }
+        }
             // Validate card month
             if (input.classList.contains('month')) {
                 if (!input.value) {
@@ -163,7 +170,11 @@ document.addEventListener('DOMContentLoaded', function(){
             
 
 })
-
+            if(allInputsValid){
+                errorMsg.style.display = 'none';
+                rightContent.style.display = 'none';
+                rightContentSuccess.style.display = 'flex';
+            }  
 
 
 })
