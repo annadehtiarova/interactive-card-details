@@ -24,8 +24,8 @@ My challenge was to build out the News homepage and get it looking as close to t
 <br>
 <img width="1702" alt="Screenshot 2024-10-16 at 11 50 24" src="https://github.com/user-attachments/assets/e1c5a795-6f4e-455f-b3cc-db80825a3948">
 <br>
-<img width="1693" alt="Screenshot 2024-10-16 at 11 51 51" src="https://github.com/user-attachments/assets/d61d4c5c-8335-4b0b-a185-082622221c0c">
-<img width="1702" alt="Screenshot 2024-10-16 at 11 58 32" src="https://github.com/user-attachments/assets/b35023a0-44ff-4499-a733-2fb06d125f00">
+<img width="1696" alt="Screenshot 2024-10-16 at 14 22 12" src="https://github.com/user-attachments/assets/c523aa59-3006-4028-a733-5d675aaa0436">
+<img width="1701" alt="Screenshot 2024-10-16 at 14 23 24" src="https://github.com/user-attachments/assets/5df21692-fc1c-4c84-a598-358e8d1f6e47">
 I was provided with a Figma file.
 <img width="1145" alt="Screenshot 2024-10-16 at 11 52 59" src="https://github.com/user-attachments/assets/7c2251ee-e3b7-4d06-9946-a3617803bb5b">
 
