@@ -22,10 +22,10 @@ My challenge was to build out the News homepage and get it looking as close to t
 <br>
 <img width="1702" alt="Screenshot 2024-10-15 at 16 53 13" src="https://github.com/user-attachments/assets/adabe690-d455-4d09-8661-633fa5e61894">
 <br>
-<img width="1702" alt="Screenshot 2024-10-16 at 11 50 24" src="https://github.com/user-attachments/assets/e1c5a795-6f4e-455f-b3cc-db80825a3948">
+<img width="1698" alt="Screenshot 2024-10-16 at 14 27 43" src="https://github.com/user-attachments/assets/6afb8acd-614f-4265-b60c-10e45b34d744">
+<img width="1698" alt="Screenshot 2024-10-16 at 14 28 35" src="https://github.com/user-attachments/assets/2bf782de-1c91-44ea-aa25-77a93e974cd6">
+<img width="1698" alt="Screenshot 2024-10-16 at 14 28 52" src="https://github.com/user-attachments/assets/6790178e-462b-4727-9226-b47c1eb5ccf5">
 <br>
-<img width="1693" alt="Screenshot 2024-10-16 at 11 51 51" src="https://github.com/user-attachments/assets/d61d4c5c-8335-4b0b-a185-082622221c0c">
-<img width="1702" alt="Screenshot 2024-10-16 at 11 58 32" src="https://github.com/user-attachments/assets/b35023a0-44ff-4499-a733-2fb06d125f00">
 I was provided with a Figma file.
 <img width="1145" alt="Screenshot 2024-10-16 at 11 52 59" src="https://github.com/user-attachments/assets/7c2251ee-e3b7-4d06-9946-a3617803bb5b">
 
