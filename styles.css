@@ -262,3 +262,142 @@ button{
     cursor: pointer;
     width: 100%;
 }
+
+@media (max-width: 375px){
+    .container{
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 64px;
+        width: 100%;
+    
+    }
+
+    .left-content {
+        width: 500px;
+        height: 500px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .right-content{
+        width: 450px;
+        height: 400px;
+        padding: 24px;
+        
+    }
+
+    .card-image-front img{
+        width: 364px;
+    }
+
+    .card-image-front{
+        position: absolute;
+        top: 200px;
+        left: 30px;
+        z-index: 999;
+    }
+
+
+    .card-image-back{
+        position: absolute;
+        top: -150px;
+        left: 50px;
+        z-index: -1;
+    }
+
+    .card-front-content{
+        display: flex;
+        flex-direction: column;
+        gap: 52px;
+        padding: 24px;
+        position: absolute;
+        top: 0px;
+        color: white;
+        z-index: 999;
+        
+    }
+    
+    .circles{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+    }
+    
+    .filled-circle{
+        background-color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+    }
+    
+    .empty-circle{
+        border: 1px solid white;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+    }
+    
+    .card-inputs{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+    
+    .month-year-display{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 142px;
+        left: 280px;
+    }
+    
+    .card-number-display{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        letter-spacing: 4px;
+        font-size: 20px;
+    }
+    
+    .cardholder-name-display{
+        text-transform: uppercase;
+    }
+    
+    .cvc-display{
+        position: absolute;
+        top: 73px;
+        left: 290px;
+        color: white;
+    
+    }
+
+    input {
+        font-size: 20px;
+        font-family: 'Space Grotesk';
+        cursor: pointer;
+        font-weight: 600;
+        height: 44px;
+    }
+
+    input::placeholder{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .cvc{
+        width: 80%;
+    }
+
+    .right-content-success{
+        width: 450px;
+        padding: 24px;
+    }
+
+    button{
+        padding: 24px;
+        letter-spacing: 2px;
+    }
+    
+}
