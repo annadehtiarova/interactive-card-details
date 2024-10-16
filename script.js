@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function(){
     function updateCardNumberDisplay(){
         let cardValue = cardNumberInput.value;
         cardNumberDisplay.innerText = cardValue ? cardValue : '0000 0000 0000 0000';
-        cardNumberDisplay.style.fontSize = '20px';
         cardNumberDisplay.style.letterSpacing = '4px';
     }
     
