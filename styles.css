@@ -81,9 +81,16 @@ body{
 
 .card-inputs{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     width: 100%;
     gap: 18px;
+}
+
+.card-inputs h2{
+    width: 450px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .month-year-display{
@@ -307,6 +314,7 @@ button{
 
     .card-front-content{
         display: flex;
+        flex-wrap: nowrap;
         flex-direction: column;
         gap: 52px;
         padding: 24px;
@@ -340,9 +348,16 @@ button{
     
     .card-inputs{
         display: flex;
+        flex-wrap: nowrap;
         flex-direction: column;
         width: 100%;
         gap: 8px;
+    }
+
+    .card-inputs h2{
+        width: 400px;
+        white-space: nowrap;
+        overflow: hidden;
     }
     
     .month-year-display{
@@ -392,6 +407,7 @@ button{
 
     .right-content-success{
         width: 450px;
+        height: 600px;
         padding: 24px;
     }
 
