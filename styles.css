@@ -1,19 +1,11 @@
-/* 
-## Colors
-
-### Primary
-
-- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
-- Red (input errors): hsl(0, 100%, 66%)
-
-### Neutral
-
-- White: hsl(0, 0%, 100%)
-- Light grayish violet: hsl(270, 3%, 87%)
-- Dark grayish violet: hsl(279, 6%, 55%)
-- Very dark violet: hsl(278, 68%, 11%)
-*/
-
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-greyish-violet: hsl(270, 3%, 87%);
+    --dark-greyish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --linear-gradient: linear-gradient(hsl(278, 68%, 11%) ,hsl(278, 94%, 30%));
+    --red-input-error: hsl(0, 100%, 66%);
+}
 
 
 
@@ -33,7 +25,7 @@ body{
 .left-content{
     position: relative;
     width: 30%;
-    background: linear-gradient(hsl(278, 68%, 11%) ,hsl(278, 94%, 30%));
+    background: var(--linear-gradient);
 }
 
 .card-image-front{
@@ -55,7 +47,7 @@ body{
     padding: 24px;
     position: absolute;
     top: 0px;
-    color: white;
+    color: var(--white);
     z-index: 999;
     
 }
@@ -68,14 +60,14 @@ body{
 }
 
 .filled-circle{
-    background-color: white;
+    background-color: var(--white);
     width: 32px;
     height: 32px;
     border-radius: 100%;
 }
 
 .empty-circle{
-    border: 1px solid white;
+    border: 1px solid var(--white);
     width: 16px;
     height: 16px;
     border-radius: 100%;
@@ -119,7 +111,7 @@ body{
     position: absolute;
     top: 93px;
     left: 365px;
-    color: white;
+    color: var(--white);
 
 }
 
@@ -209,7 +201,7 @@ form .cvc-input{
 
 
 label{
-    color: hsl(278, 68%, 11%);
+    color: var(--very-dark-violet);
     font-size: 14px;
     font-weight:500;
     letter-spacing: 3px;
@@ -217,7 +209,7 @@ label{
 
 input {
     height: 28px;
-    border: 1px solid hsl(270, 3%, 87%);
+    border: 1px solid var(--light-greyish-violet);
     border-radius: 8px;
     padding: 14px;
     outline: none;
@@ -228,36 +220,36 @@ input {
 }
 
 input:hover{
-    border: 1px solid hsl(278, 68%, 11%);
+    border: 1px solid var(--very-dark-violet);
 
 }
 
 input:focus{
-    border: 1px solid hsl(278, 68%, 11%);
-    color: hsl(278, 68%, 11%);
+    border: 1px solid var(--very-dark-violet);
+    color: var(--very-dark-violet);
     font-size: large;
 }
 
 input:active{
-    border: 1px solid hsl(270, 3%, 87%);;
-    color: hsl(278, 68%, 11%);
+    border: 1px solid var(--very-dark-violet);
+    color: var(--very-dark-violet);
     font-size: large;
 }
 
 .error-message{
     display: none;
-    color: hsl(0, 100%, 66%);
+    color: var(--red-input-error);
     font-size: 12px;
     padding: 0;
     margin: 0;
 }
 
 input.error{
-    border: 1px solid hsl(0, 100%, 66%);
+    border: 1px solid var(--red-input-error);
 }
 
 input::placeholder{
-    color: hsl(270, 3%, 87%);
+    color: var(--white);
     font-size: 18px;
     font-family: 'Space Grotesk';
 }
@@ -265,8 +257,8 @@ input::placeholder{
 button{
     border-radius: 8px;
     padding: 18px;
-    background-color: hsl(278, 68%, 11%);
-    color: white;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
     border: none;
     font-size: 18px;
     cursor: pointer;
@@ -327,7 +319,7 @@ button{
         padding: 24px;
         position: absolute;
         top: 0px;
-        color: white;
+        color: var(--white);
         z-index: 999;
         
     }
@@ -340,14 +332,14 @@ button{
     }
     
     .filled-circle{
-        background-color: white;
+        background-color: var(--white);
         width: 32px;
         height: 32px;
         border-radius: 100%;
     }
     
     .empty-circle{
-        border: 1px solid white;
+        border: 1px solid var(--white);
         width: 16px;
         height: 16px;
         border-radius: 100%;
@@ -388,7 +380,7 @@ button{
         top: 56px;
         left: 240px;
         font-size: 14px;
-        color: white;
+        color: var(--white);
     
     }
 
